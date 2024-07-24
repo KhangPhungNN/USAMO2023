@@ -1,0 +1,75 @@
+%Latex by PNNK
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nameref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\begin{document}
+	\textbf{(USAMO 2023 P1).} Cho tam giác $ABC$ có $M$ là trung điểm cạnh $BC$. $P$ là chân đường vuông góc hạ từ $C$ tới $AM$. Giả sử đường tròn ngoại tiếp tam giác $ABP$ cắt $BC$ tại điểm thứ hai $Q$. $N$ là trung điểm $AQ$. Chứng minh rằng $NB=NC$.\\
+	
+	\textbf{\underline{Solutions.}}\\
+	
+
+	\pagestyle{empty}
+		\definecolor{wqwqwq}{rgb}{0.38,0.38,0.38}
+		\definecolor{uququq}{rgb}{0.25,0.25,0.25}
+		\definecolor{xdxdff}{rgb}{0.49,0.49,1}
+		\definecolor{qqqqff}{rgb}{0,0,1}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+			\clip(-1.66,-5.62) rectangle (21.36,8.18);
+			\draw[color=wqwqwq,fill=wqwqwq,fill opacity=0.1] (6.59,-3.45) -- (6.49,-3.03) -- (6.08,-3.13) -- (6.18,-3.55) -- cycle; 
+			\draw (0.08,-2.22)-- (11.63,-2.23);
+			\draw(4.11,1.63) circle (5.58cm);
+			\draw (3.59,7.18)-- (8.13,-2.23);
+			\draw (5.86,2.48)-- (0.08,-2.22);
+			\draw (5.86,2.48)-- (11.63,-2.23);
+			\draw (3.59,7.18)-- (0.08,-2.22);
+			\draw (3.59,7.18)-- (11.63,-2.23);
+			\draw (6.18,-3.55)-- (11.63,-2.23);
+			\draw (3.59,7.18)-- (6.18,-3.55);
+			\draw (3.59,7.18)-- (3.58,-2.22);
+			\begin{scriptsize}
+				\fill [color=uququq] (0.08,-2.22) circle (1.5pt);
+				\draw[color=uququq] (-0.28,-2.38) node {\normalsize$B$};
+				\fill [color=uququq] (3.59,7.18) circle (1.5pt);
+				\draw[color=uququq] (3.48,7.6) node {\normalsize$A$};
+				\fill [color=uququq] (11.63,-2.23) circle (1.5pt);
+				\draw[color=uququq] (11.9,-1.96) node {\normalsize$C$};
+				\fill [color=uququq] (5.86,-2.23) circle (1.5pt);
+				\draw[color=uququq] (5.48,-2.6) node {\normalsize$M$};
+				\fill [color=uququq] (6.18,-3.55) circle (1.5pt);
+				\draw[color=uququq] (6.04,-4) node {\normalsize$P$};
+				\fill [color=uququq] (8.13,-2.23) circle (1.5pt);
+				\draw[color=uququq] (8.4,-2.54) node {\normalsize$Q$};
+				\fill [color=uququq] (5.86,2.48) circle (1.5pt);
+				\draw[color=uququq] (6.02,2.76) node {\normalsize$N$};
+				\fill [color=uququq] (3.58,-2.22) circle (1.5pt);
+				\draw[color=uququq] (3.34,-2.48) node {\normalsize$D$};
+			\end{scriptsize}
+		\end{tikzpicture}
+		
+Từ $A$ hạ đường cao $AD$ tới $BC$ ($D\in{BC}$).\\
+
+Ta có các tứ giác $AQPB,CPDA$ nội tiếp.\\
+
+Điểm $M$ thuộc trục đẳng phương của hai đường tròn $(AQPB),(CPDA)$. Ta có:
+\begin{center}
+	$MB\cdot{MQ}=MP\cdot{MA}=MD\cdot{MC}$
+\end{center}
+
+Mà $MB=MC\Rightarrow{MD=MQ}$. Như vậy $M$ là trung điểm $DQ\Rightarrow{NM}$ là đường trung bình của tam giác $ADQ$. Do đó $NM\parallel{AD}$. Mà $AD\perp{BC}\Rightarrow{NM}\perp{BC}$. Mặt khác $M$ là trung điểm $BC$ nên $NM$ là trung trực $BC$. Vì vậy $NB=NC$.\\
+
+\begin{flushleft}
+	\texttt{\underline{Ghi chú: }Có rất nhiều lời giải cho bài này nhưng đây là cách ngắn gọn và dễ hiểu hơn hết.}
+\end{flushleft}
+\end{document}
